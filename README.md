@@ -90,6 +90,8 @@ The backend is implemented with **NestJS** and handles **user registration, emai
 }```
 
 
+
+```
 Action:
 
 Generates a random alphanumeric verificationToken.
@@ -126,7 +128,8 @@ Possible Responses:
 404 Not Found — User not found ❌
 
 Example Verification URL:
-http://localhost:3000/user/verify-email/exampleUser/abc123token
+```
+http://localhost:3000/user/verify-email/exampleUser/abc123token  ```
 
 
 3️⃣ Check Verification Status
