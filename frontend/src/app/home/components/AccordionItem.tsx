@@ -35,7 +35,7 @@ export default function AccordionItem({ product, icon, items ,description,step=1
         transition: 'all 0.3s ease',
       }}
     >
-      {/* Başlık */}
+      {/* üst Başlık */}
       <div
         onClick={handleClick}
         style={{
@@ -69,7 +69,7 @@ export default function AccordionItem({ product, icon, items ,description,step=1
         ></span>
       </div>
 
-      {/* Açılır kısım */}
+      {/* kart Açılır kısım */}
       <div
         style={{
           maxHeight: isOpen ? '400px' : '0',
@@ -149,7 +149,7 @@ export default function AccordionItem({ product, icon, items ,description,step=1
                 <PedIcon width={16} height={16} color="white" />
               </div>
 
-              {/* Metin */}
+          
               <span
                 style={{
                   fontSize: '0.85rem',
