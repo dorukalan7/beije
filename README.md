@@ -87,7 +87,7 @@ The backend is implemented with **NestJS** and handles **user registration, emai
 {
   "username": "exampleUser",
   "email": "user@example.com"
-}```
+}
 
 
 
@@ -129,9 +129,9 @@ Possible Responses:
 
 Example Verification URL:
 ```
-http://localhost:3000/user/verify-email/exampleUser/abc123token  ```
+http://localhost:3000/user/verify-email/exampleUser/abc123token  
 
-
+```
 3️⃣ Check Verification Status
 
 GET /user/check-verification?username=exampleUser&email=user@example.com
