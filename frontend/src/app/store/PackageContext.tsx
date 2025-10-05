@@ -25,7 +25,7 @@ export default function PackageProvider({ children }: ProviderProps) {
     return {};
   });
 
-  // counts state'i localStorage'a kaydet
+  // count state'i localStorage'a save
   useEffect(() => {
     localStorage.setItem('counts', JSON.stringify(counts));
   }, [counts]);
