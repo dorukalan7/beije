@@ -67,3 +67,64 @@ After login and verification, users land on the **Custom Package Builder page**.
 - Fully responsive layout, optimized for all devices.
 
 ![Home Page / Custom Package Builder](readme-assets/homepage.png)
+
+
+
+🧪 Testing
+
+Manual Testing:
+
+Register a new user on the frontend and verify that the email is received.
+
+Click the verification link and ensure the backend sets isVerified = true.
+
+Log in and select products in the Custom Package Builder, confirm real-time updates.
+
+Backend Testing (Optional):
+
+Use tools like Postman or Insomnia to test API endpoints:
+
+POST /user/register
+
+GET /user/verify-email/:username/:verificationToken
+
+GET /user/check-verification?username=<username>
+
+Frontend Testing (Optional):
+
+Test React components individually.
+
+Confirm Context API state updates correctly across multiple components.
+
+⚙️ Project Modules & Architecture
+Backend (NestJS)
+
+UserController: Handles registration, email verification, and user verification checks.
+
+UserService: Contains business logic for creating users, sending verification emails, and updating verification status.
+
+MailService: Sends emails using Nodemailer with Gmail SMTP.
+
+User Entity: Represents the database table for users with fields: username, email, verificationToken, isVerified.
+
+Database: PostgreSQL, managed via TypeORM.
+
+Frontend (Next.js + React)
+
+Pages / App Router:
+
+page.tsx in /app: Home page wrapper that checks verification status.
+
+Register/page.tsx: User registration page.
+
+home/page.tsx: Custom Package Builder page.
+
+Components:
+
+AccordionItem.tsx, PackageOption.tsx, PackageSummary.tsx
+
+Context / Store:
+
+PackageContext.tsx: Global state management for selected products.
+
+Styles: TailwindCSS for responsive design.
