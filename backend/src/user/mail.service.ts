@@ -9,15 +9,15 @@ export class MailService {
     this.transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'dorukalan7@gmail.com',  // Buraya kendi mailini yaz
-        pass: 'qtki gmav zecr yvzo',     // Buraya Gmail App Password
+        user: 'dorukalan7@gmail.com',  
+        pass: 'qtki gmav zecr yvzo',     
       },
     });
   }
 
   async sendVerificationEmail(email: string, token: string) {
     const mailOptions = {
-      from: 'dorukalan7@gmail.com',    // Gönderici maili kendi mailin olmalı
+      from: 'dorukalan7@gmail.com',    
       to: email,
       subject: 'Email Doğrulama',
       text: `Doğrulama için bu tokeni kullan: ${token}`,

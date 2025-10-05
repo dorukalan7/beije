@@ -56,8 +56,8 @@ export class UserService {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'seninemail@gmail.com',  // buraya kendi Gmail adresin
-        pass: 'app_password',          // buraya Gmail App Password
+        user: 'seninemail@gmail.com',  
+        pass: 'app_password',          
       },
     });
 
