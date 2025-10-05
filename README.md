@@ -87,7 +87,7 @@ The backend is implemented with **NestJS** and handles **user registration, emai
 {
   "username": "exampleUser",
   "email": "user@example.com"
-}
+}'''
 
 
 Action:
