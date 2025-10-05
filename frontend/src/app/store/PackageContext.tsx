@@ -25,12 +25,12 @@ export default function PackageProvider({ children }: ProviderProps) {
     return {};
   });
 
-  // count state'i localStorage'a save
+  // count state'i localStorage'a save.
   useEffect(() => {
-    localStorage.setItem('counts', JSON.stringify(counts));
+    localStorage.setItem('counts'  , JSON.stringify(counts));
   }, [counts]);
 
-   const toggleOption = (option: string) => {
+    const toggleOption = (option: string) => {
     setSelectedOptions(prev =>
       prev.includes(option) ? prev.filter(o => o !== option) : [...prev, option]
     );
