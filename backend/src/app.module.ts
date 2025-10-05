@@ -9,12 +9,12 @@ import { User } from './user/user.entity';
       type: 'postgres',
       host: 'localhost',
       port: 5432,
-      username: 'postgres', // PostgreSQL kullanıcı adın
-      password: '12345',     // PostgreSQL şifren
-      database: 'beije_db', // oluşturduğun DB
+      username: 'postgres', 
+      password: '12345',     
+      database: 'beije_db', 
       entities: [User],
       autoLoadEntities: true,
-      synchronize: true,    // ilk aşamada otomatik tablo oluşturmak için
+      synchronize: true,    
     }),
     UserModule,
   ],

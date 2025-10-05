@@ -71,7 +71,7 @@ export class UserController {
       throw new BadRequestException('Invalid token');
     }
 
-    // Kullanıcıyı verified yap
+    // Kullanıcıyı verified yaptık
     user.isVerified = true;
     await this.userRepository.save(user);
 
