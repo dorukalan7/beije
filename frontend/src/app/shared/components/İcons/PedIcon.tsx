@@ -2,10 +2,10 @@
 import React from 'react';
 
 type IconProps = {
-  size?: number;        // genel boyut (hem width hem height için)
-  width?: number;       // tercihe bağlı, size'dan öncelikli
-  height?: number;      // tercihe bağlı
-  color?: string;       // stroke rengi
+  size?: number;        
+  width?: number;       
+  height?: number;      
+  color?: string;       
   className?: string;
 };
 
@@ -33,7 +33,7 @@ export default function PedIcon({
         stroke={color}
         strokeWidth={1.5}
         strokeMiterlimit={10}
-        // clipRule not necessary for this path; eğer istersen: clipRule="evenodd"
+
       />
     </svg>
   );
