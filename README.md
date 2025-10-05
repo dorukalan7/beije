@@ -37,3 +37,33 @@ Built with a **Next.js + NestJS** stack, this project demonstrates clean archite
 ## 🏗️ Project Structure
 
 ### **Frontend**
+
+
+
+## 🖥️ Frontend Screenshots
+
+### 1️⃣ Login & Registration
+
+Users start at the **Login / Registration page**. Here they can:
+
+- Enter their **username** and **email** to register.
+- Upon registration, a verification email is sent automatically (via Nodemailer + SMTP).
+- Users must **verify their email** by clicking the link before accessing the main app.
+- Once verified, the user can log in and proceed to the Custom Package Builder.
+
+![Login / Registration Page](readme-assets/login.png)
+
+---
+
+### 2️⃣ Custom Package Builder (Home Page)
+
+After login and verification, users land on the **Custom Package Builder page**. Features include:
+
+- Selecting products from different categories (e.g., Menstrual Products, Supportive Products).
+- Adding desired quantities for each product dynamically.
+- Real-time update of the selected items list and total count.
+- A summary panel showing the current “My Custom Package” selections.
+- Interactive UI elements (AccordionItems, selection highlights, etc.).
+- Fully responsive layout, optimized for all devices.
+
+![Home Page / Custom Package Builder](readme-assets/homepage.png)
