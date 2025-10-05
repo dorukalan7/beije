@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import PackageProvider from './store/PackageContext';
-import Header from './components/Header'; // Header path doğru olmalı
+import Header from './shared/components/Header'; // Header path doğru olmalı
 
 interface LayoutProps {
   children: ReactNode;

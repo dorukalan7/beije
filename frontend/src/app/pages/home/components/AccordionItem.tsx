@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { usePackage } from '../store/PackageContext';
-import PedIcon from './İcons/PedIcon';
+import { usePackage } from '../../../store/PackageContext';
+import PedIcon from '../../../shared/components/İcons/PedIcon';
 
 interface AccordionItemProps {
   product: string;

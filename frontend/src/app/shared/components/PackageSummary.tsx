@@ -1,5 +1,5 @@
 'use client';
-import { usePackage } from '../store/PackageContext';
+import { usePackage } from '../../store/PackageContext';
 
 export default function PackageSummary() {
   const { selectedOptions } = usePackage();
