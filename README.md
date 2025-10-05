@@ -70,61 +70,105 @@ After login and verification, users land on the **Custom Package Builder page**.
 
 
 
-🧪 Testing
+---
 
-Manual Testing:
+## 🔧 Backend & Email Verification
 
-Register a new user on the frontend and verify that the email is received.
+The backend is implemented with **NestJS** and handles **user registration, email verification, and verification checks**. Emails are sent using **Nodemailer** via Gmail SMTP with a secure **App Password**.  
 
-Click the verification link and ensure the backend sets isVerified = true.
+### **API Endpoints**
 
-Log in and select products in the Custom Package Builder, confirm real-time updates.
+#### 1️⃣ Register User
 
-Backend Testing (Optional):
+**POST** `/user/register`
 
-Use tools like Postman or Insomnia to test API endpoints:
+- **Request Body:**
+```json
+{
+  "username": "exampleUser",
+  "email": "user@example.com"
+}
 
-POST /user/register
 
-GET /user/verify-email/:username/:verificationToken
+Action:
 
-GET /user/check-verification?username=<username>
+Generates a random alphanumeric verificationToken.
 
-Frontend Testing (Optional):
+Saves { username, email, verificationToken, isVerified } to the database (isVerified is initially false).
 
-Test React components individually.
+Sends an email with the verification token link via your Gmail account using App Password.
 
-Confirm Context API state updates correctly across multiple components.
+Possible Responses:
 
-⚙️ Project Modules & Architecture
-Backend (NestJS)
+200 OK — User successfully registered.
 
-UserController: Handles registration, email verification, and user verification checks.
+400 Bad Request — Missing fields, or username/email already exists.
 
-UserService: Contains business logic for creating users, sending verification emails, and updating verification status.
 
-MailService: Sends emails using Nodemailer with Gmail SMTP.
+2️⃣ Verify Email
 
-User Entity: Represents the database table for users with fields: username, email, verificationToken, isVerified.
+GET /user/verify-email/{username}/{verificationToken}
 
-Database: PostgreSQL, managed via TypeORM.
+Action:
 
-Frontend (Next.js + React)
+Finds the user by username.
 
-Pages / App Router:
+Compares the provided verificationToken with the database.
 
-page.tsx in /app: Home page wrapper that checks verification status.
+If valid, sets isVerified = true.
 
-Register/page.tsx: User registration page.
+Possible Responses:
 
-home/page.tsx: Custom Package Builder page.
+200 OK — Email successfully verified ✅
 
-Components:
+400 Bad Request — Token mismatch ❌
 
-AccordionItem.tsx, PackageOption.tsx, PackageSummary.tsx
+404 Not Found — User not found ❌
 
-Context / Store:
+Example Verification URL:
+http://localhost:3000/user/verify-email/exampleUser/abc123token
 
-PackageContext.tsx: Global state management for selected products.
 
-Styles: TailwindCSS for responsive design.
+3️⃣ Check Verification Status
+
+GET /user/check-verification?username=exampleUser&email=user@example.com
+
+Action: Checks whether the user is verified.
+
+Possible Responses:
+
+200 OK — User is verified ✅
+
+400 Bad Request — User exists but email is not verified ❌
+
+404 Not Found — User not found ❌
+
+🛠️ Development Notes
+
+Global State Management: Implemented using React Context API to manage user selections across pages seamlessly.
+
+Email Sending: Nodemailer uses Gmail SMTP and App Passwords for security. Emails are sent to any valid recipient, not limited to the developer’s email.
+
+Error Handling: Backend provides proper HTTP status codes to signal success or failure for all user actions.
+
+Frontend: Responsive UI with real-time updates of selected products and totals.
+
+Testing: Can be tested using Postman, Insomnia, or directly via frontend UI.
+
+✅ Summary
+
+This project demonstrates:
+
+Full-stack development with Next.js + NestJS
+
+Email verification workflow using Nodemailer
+
+Secure use of Gmail App Passwords
+
+Dynamic, responsive front-end UI for custom package creation
+
+Global state management via React Context API
+
+With this setup, users can safely register, verify their emails, and create personalized care packages with instant feedback.
+
+
