@@ -22,7 +22,7 @@ export default function HomePage() {
         padding: '0 45px',
       }}
     >
-      {/* Başlık */}
+      
       <h2 style={{ marginTop: '50px', fontWeight: '600', fontSize: '1.5rem' }}>
         Kendi Paketini Oluştur
         <span
@@ -39,7 +39,7 @@ export default function HomePage() {
         </span>
       </h2>
 
-      {/* Açıklama */}
+      
       <p
         style={{
           fontWeight: '400',
@@ -110,7 +110,7 @@ export default function HomePage() {
         icon="🩸"
         items={['Standart Ped', 'Super Ped', 'Premium Ped']}
         description="Çoğu beije kullanıcısı normal yoğunlukta bir regl dönemi için abonelik paketinde 20 Standart, 20 Süper Ped tercih ediyor."
-        step={10} // 10'ar artacak/azalacak
+        step={10} 
         defaultOpen={true}
       />
 
@@ -119,14 +119,14 @@ export default function HomePage() {
         icon="🌸"
         items={['Günlük Ped', 'Süper Günlük Ped', 'Tanga Günlük Ped']}
         description="Kullanıcılarımızın %68'i akıntıları olan günlerde Standart Günlük Ped'i, regllerinin son günlerinde veya daha yoğun akıntıları olan günlerde ise Süper Günlük Ped'i tercih ediyor."
-        step={10} // 10'ar artacak/azalacak
+        step={10} 
       />
       <AccordionItem
         product="Beije Tampon"
         icon="🩸"
         items={['Mini Tampon', 'Standart Tampon', 'Süper Tampon']}
         description="Beije Tampon, günlük kullanım için ideal ve konforludur."
-        step={10} // 10'ar artacak/azalacak
+        step={10} 
       />
       
     </>
@@ -161,7 +161,7 @@ export default function HomePage() {
 
         </div>
 
-       {/* Sağ taraf: Özel Paketim (sol ürünlerin satırıyla hizalı) */}
+       {/* Sağ taraf: Özel Paketim */}
 <div
   style={{
     flex: '0 0 45%',
@@ -179,7 +179,7 @@ export default function HomePage() {
     gap: '15px',
   }}
 >
-  {/* Başlık ve kutu sağa hizalı */}
+  
   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
     <h2 style={{ fontWeight: 600, fontSize: '1.5rem', margin: 0 }}>
       Özel Paketim
@@ -226,7 +226,7 @@ export default function HomePage() {
   </div>
 )}
 
-{/* Sepete Ekle Butonu: ortalanmış */}
+{/* Sepete Ekle Butonu:*/}
   <div
   style={{
     marginTop: '20px',
