@@ -1,0 +1,40 @@
+// src/components/icons/PedIcon.tsx
+import React from 'react';
+
+type IconProps = {
+  size?: number;        // genel boyut (hem width hem height için)
+  width?: number;       // tercihe bağlı, size'dan öncelikli
+  height?: number;      // tercihe bağlı
+  color?: string;       // stroke rengi
+  className?: string;
+};
+
+export default function PedIcon({
+  size = 24,
+  width,
+  height,
+  color = 'currentColor',
+  className,
+}: IconProps) {
+  const w = width ?? size;
+  const h = height ?? size;
+
+  return (
+    <svg
+      width={w}
+      height={h}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M2.36719 11.559C2.36719 12.3844 2.53713 14.2392 3.67333 15.055C4.80953 15.8707 7.38297 15.4191 8.35893 15.3026C9.3349 15.1861 9.22322 16.1426 9.35918 16.8369C9.49513 17.5313 10.1215 17.7546 10.4274 17.7546H12.0006C12.0006 17.7546 13.2679 17.7546 13.5738 17.7546C13.8797 17.7546 14.5061 17.5361 14.642 16.8369C14.778 16.1377 14.6663 15.1812 15.6423 15.3026C16.6182 15.424 19.1868 15.8707 20.3279 15.055C21.4689 14.2392 21.634 12.3844 21.634 11.559C21.634 10.7335 21.4641 8.8787 20.3279 8.06297C19.1917 7.24723 16.6182 7.6988 15.6423 7.81533C14.6663 7.93187 14.778 6.97532 14.642 6.28098C14.5061 5.58664 13.8797 5.36328 13.5738 5.36328H12.0006C12.0006 5.36328 10.7333 5.36328 10.4274 5.36328C10.1215 5.36328 9.49513 5.58178 9.35918 6.28098C9.22322 6.98018 9.3349 7.93672 8.35893 7.81533C7.38297 7.69394 4.81438 7.24723 3.67333 8.06297C2.53228 8.8787 2.36719 10.7335 2.36719 11.559Z"
+        stroke={color}
+        strokeWidth={1.5}
+        strokeMiterlimit={10}
+        // clipRule not necessary for this path; eğer istersen: clipRule="evenodd"
+      />
+    </svg>
+  );
+}
