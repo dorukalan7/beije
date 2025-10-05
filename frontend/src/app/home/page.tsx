@@ -1,8 +1,10 @@
 'use client';
 import Register from '../Register/page';
 import { useState } from 'react';
-import AccordionItem from '../components/AccordionItem';
 import { usePackage } from '../store/PackageContext';
+import AccordionItem from './components/AccordionItem';
+
+
 
 
 export default function HomePage() {

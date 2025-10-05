@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Register from './pages/Register/page';
+import Register from './Register/page';
 import HomePage from './home/page'; // HomePage dosyan senin verdiğin component
 
 export default function HomePageWrapper() {

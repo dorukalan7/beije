@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header
       style={{
-        width: '100%', // arka plan full ekran
+        width: '100%', 
         backgroundColor: 'white',
         position: 'sticky',
         top: 0,
@@ -16,11 +16,11 @@ export default function Header() {
         height: 100,
       }}
     >
-      {/* İçerik container */}
+    
       <div
         style={{
-          width: '95%',         // içerik genişliği
-          margin: '0 auto',     // ortalama
+          width: '95%',         
+          margin: '0 auto',     
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -28,7 +28,7 @@ export default function Header() {
           height: '100%',
         }}
       >
-        {/* Sol: Logo + Nav + Biz Önerelim */}
+        
         <div style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
           {/* Logo */}
           <Image
@@ -39,7 +39,7 @@ export default function Header() {
             style={{ height: 'auto' }}
           />
 
-          {/* Nav öğeleri */}
+          
           <div style={{ display: 'flex', gap: '30px', justifyContent: 'flex-start' }}>
             {['Ürünler', 'Biz Kimiz', 'Bağış Kültürü'].map((title) => (
               <div
@@ -59,7 +59,7 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Biz Önerelim */}
+          
           <div style={{ fontWeight: '500', fontSize: '0.9rem', cursor: 'pointer' }}>
             Biz Önerelim
           </div>
@@ -70,7 +70,7 @@ export default function Header() {
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '20px', // öğeler arası eşit boşluk
+            gap: '20px', 
           }}
         >
           {/* Kendi Paketini Oluştur */}
@@ -86,8 +86,7 @@ export default function Header() {
               fontWeight: '600',
               fontSize: '0.9rem',
               backgroundColor: 'white',
-              width: 'fit-content', // sadece yazıyı saracak
-              flexShrink: 0,
+              width: 'fit-content', 
             }}
           >
             <span>Kendi Paketini Oluştur</span>

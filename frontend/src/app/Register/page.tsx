@@ -97,7 +97,7 @@ export default function AuthPage() {
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#f7f7f7', paddingTop: '40px' }}>
       <div style={{ maxWidth: '400px', margin: '0 auto', textAlign: 'center' }}>
-        {/* Sabit başlık */}
+        
         <h1 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '8px' }}>Merhaba</h1>
         <p style={{ fontSize: '1rem', color: '#555', marginBottom: '24px' }}>Beije’ye Hoşgeldiniz</p>
 
